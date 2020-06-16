@@ -1,0 +1,7 @@
+<select class="toolbar__lang" (change)="changeLang($event.target.value)">
+    <option *ngFor="let lang of langList$ | async"
+            [value]="lang.code"
+            [selected]="lang.code === currentLang">
+        {{ lang.name }}
+    </option>
+</select>

@@ -1,0 +1,41 @@
+{
+  "loading": "Loading",
+  "sidebar": {
+    "home": "Home",
+    "mock": "Mock",
+    "back-http": "Back http",
+    "static-back-http": "Static `Back http`",
+    "async-http": "http async",
+    "nonexistent": "404: Page not found",
+    "logout": "Log Out"
+  },
+  "home": {
+    "title": "Home page",
+    "location": "My current location",
+    "text": "This is some text in English at home page",
+    "country": "Country",
+    "regionName": "Region Name",
+    "city": "City",
+    "zip":"Zip Code",
+    "timeZone": "Time Zone"
+  },
+  "mock": {
+    "title": "Mock page",
+    "text": "This is some text in English at mock page"
+  },
+  "back-http": {
+    "title": "Http request page",
+    "text": "This is some text in English at back http page",
+    "delay": "delay back get 3 sec:",
+    "post": "POST request:",
+    "original-url": "Origin URL:"
+  },
+  "not-found": {
+    "title": "Not Found",
+    "text": "Page Not Found"
+  },
+  "buttons": {
+    "login": "Login",
+    "registration": "Registration"
+  }
+}
