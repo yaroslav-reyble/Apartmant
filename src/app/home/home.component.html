@@ -7,66 +7,69 @@
 <!--<p>{{ "home.timeZone" | translate }}: {{location.timezone}}</p>-->
 <!--</div>-->
 <section>
-  <div class="wrapper" fxLayout >
+    <div class="wrapper" fxLayout>
 
-   <div class="tab-side"  fxFlex="55%" fxLayoutAlign="end" fxFlexAlign="center">
-         <div  fxFlex="62%" >
-           <mat-tab-group>
-             <mat-tab label="Find properties">
-               <div class="hire" *ngIf="location">
-                 <h1>Find local professionals for pretty much anything.</h1>
-                 <mat-form-field>
-                   <mat-label>Choose your city</mat-label>
-                   <mat-select matInput [(value)]="city" name="food">
-                     <mat-option *ngFor="let city of cities" [value]="city">
-                       {{city}}
-                     </mat-option>
-                   </mat-select>
-                 </mat-form-field>
-                 <mat-form-field class="zip">
-                   <mat-label>Zip Code</mat-label>
-                   <input matInput type="text" [(ngModel)]="location.zip">
-                 </mat-form-field>
-                 <button>Search</button>
-               </div>
-             </mat-tab>
-             <mat-tab label="Find Broker">
-               <div class="hire">
-                 <h1>Meet new customers in Ashburn.</h1>
-                 <p>Sign up for a free profile on Thumbtack to start growing your business.</p>
-                 <button>Get started</button>
-               </div>
-             </mat-tab>
-           </mat-tab-group>
-         </div>
-   </div>
-    <div class="image-side" fxFlex="45%">
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap" fxLayout fxLayoutAlign="center" >
-    <div class="carousel" fxFlexAlign="center">
-     <div class="carousel-label">
-       <span>
-       Popular services in Ashburn, VA.
-       </span>
-     </div>
-      <div class="carousel-items" fxLayout fxLayoutAlign="center" >
-       <div class="item" fxFlex="33%">
-         <img src="assets/img/work.jpeg">
-         <p>Interior Painting</p>
-       </div>
-        <div class="item" fxFlex="33%">
-          <img src="assets/img/work.jpeg">
-          <p>Interior Painting</p>
+        <div class="tab-side" fxFlex="50%" fxLayoutAlign="end" fxFlexAlign="center">
+            <div fxFlex="70%">
+                <mat-tab-group>
+                    <mat-tab label="Find properties">
+                        <div class="hire" *ngIf="location">
+                            <h1>Find Your Dream Apartment.</h1>
+                            <mat-form-field>
+                                <mat-label>Choose your city</mat-label>
+                                <mat-select matInput [(value)]="city" name="food">
+                                    <mat-option *ngFor="let city of cities" [value]="city">
+                                        {{city}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="zip">
+                                <mat-label>Zip Code</mat-label>
+                                <input matInput type="text" [(ngModel)]="location.zip">
+                            </mat-form-field>
+                            <button>Search</button>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Find Broker">
+                        <div fxLayout *ngIf="!isSecondStep">
+                            <div class="hire broker" fxLayout fxFlex="100%" fxLayoutAlign="end">
+                                <app-broker-form (nextStep)="isSecondStep = true"></app-broker-form>
+                            </div>
+                        </div>
+                        <div *ngIf="isSecondStep" class="hire">
+                            <app-progress-status fxFlex="40%"></app-progress-status>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
         </div>
-        <div class="item" fxFlex="33%">
-          <img src="assets/img/work.jpeg">
-          <p>Interior Painting</p>
+        <div class="image-side" fxFlex="50%">
         </div>
-      </div>
     </div>
-  </div>
+    <!--</section>-->
+    <!--<section>-->
+    <!--  <div class="wrap" fxLayout fxLayoutAlign="center" >-->
+    <!--    <div class="carousel" fxFlexAlign="center">-->
+    <!--     <div class="carousel-label">-->
+    <!--       <span>-->
+    <!--       Popular services in Ashburn, VA.-->
+    <!--       </span>-->
+    <!--     </div>-->
+    <!--      <div class="carousel-items" fxLayout fxLayoutAlign="center" >-->
+    <!--       <div class="item" fxFlex="33%">-->
+    <!--         <img src="assets/img/work.jpeg">-->
+    <!--         <p>Interior Painting</p>-->
+    <!--       </div>-->
+    <!--        <div class="item" fxFlex="33%">-->
+    <!--          <img src="assets/img/work.jpeg">-->
+    <!--          <p>Interior Painting</p>-->
+    <!--        </div>-->
+    <!--        <div class="item" fxFlex="33%">-->
+    <!--          <img src="assets/img/work.jpeg">-->
+    <!--          <p>Interior Painting</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
 
-</section>
+    <!--</section>-->

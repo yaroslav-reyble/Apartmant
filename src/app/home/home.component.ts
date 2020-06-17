@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   location: any;
   cities = ['New York', 'London', 'Kiev'];
   city: string;
+  isSecondStep = false;
   constructor(
     @Inject(PLATFORM_ID) private _platformId: Object,
     private authService: AuthService

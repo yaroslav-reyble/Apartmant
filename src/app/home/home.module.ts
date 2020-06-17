@@ -12,19 +12,20 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
 import { MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {LayoutsModule} from '@shared/layouts/layouts.module';
 
 @NgModule({
-  imports: [CommonModule,
-    HomeRoutes,
-    TranslateModule,
-    FlexLayoutModule,
-    MatCardModule,
-    MatTabsModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatIconModule,
-    MatSelectModule,
-    MatInputModule, MatButtonModule],
+    imports: [CommonModule,
+        HomeRoutes,
+        TranslateModule,
+        FlexLayoutModule,
+        MatCardModule,
+        MatTabsModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatIconModule,
+        MatSelectModule,
+        MatInputModule, MatButtonModule, LayoutsModule],
   declarations: [HomeComponent],
 })
 export class HomeModule {}

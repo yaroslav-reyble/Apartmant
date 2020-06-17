@@ -1,0 +1,27 @@
+<section>
+    <form>
+        <div fxLayout fxLayoutAlign="space-between">
+            <mat-form-field appearance="outline" class="half-w">
+                <mat-label>First Name*</mat-label>
+                <input matInput placeholder="First Name">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="half-w">
+                <mat-label>Last Name*</mat-label>
+                <input matInput placeholder="Last Name*">
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline" class="w-84">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="w-84">
+            <mat-label>Phone</mat-label>
+            <input matInput placeholder="Phone">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="w-84">
+            <mat-label>How did find us?</mat-label>
+            <input matInput placeholder="How did find us?">
+        </mat-form-field>
+        <button mat-button type="button" (click)="nextStep.emit()">Submit</button>
+    </form>
+</section>

@@ -7,12 +7,18 @@
       font-size: 2.4vw;
     }
 
-    .hire{
-    height: 300px;
-      .zip{
+    .broker {
+      text-align: center;
+    }
+
+    .hire {
+      height: 500px;
+
+      .zip {
         width: 60px;
       }
-      mat-form-field{
+
+      mat-form-field {
         width: 40%;
         margin: 0 10px;
       }
@@ -49,30 +55,39 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("~assets/img/main-img.jpeg");
+    background-image: url("~assets/img/main1.png");
 
   }
 }
-.wrap{
+
+.wrap {
   height: 400px;
   background-color: #fafafa;
   border-top: 1px solid #e9eced;
   border-bottom: 1px solid #e9eced;
-  .carousel{
+
+  .carousel {
     background: white;
     width: 70%;
-    &-label{
+
+    &-label {
       font-size: 1.5vw;
       margin-bottom: 10px;
     }
-    &-items{
+
+    &-items {
       width: 100%;
       height: 300px;
-      img{
+
+      img {
         width: 90%;
         height: auto;
         border-radius: 10px;
       }
     }
   }
+}
+
+app-broker-form {
+  width: 95%;
 }
