@@ -15,9 +15,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ProgressStatusComponent } from './progress-status/progress-status.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, TranslateModule, FlexLayoutModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatStepperModule],
+    imports: [CommonModule, RouterModule, TranslateModule, FlexLayoutModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatStepperModule, ReactiveFormsModule, MatSelectModule],
   declarations: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent, HeaderComponent, BrokerFormComponent, ProgressStatusComponent],
   exports: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent, BrokerFormComponent, ProgressStatusComponent],
 })

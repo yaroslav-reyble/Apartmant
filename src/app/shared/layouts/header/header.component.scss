@@ -1,27 +1,36 @@
-.header{
+.header {
   background-color: #fff;
   height: 50px;
   border-bottom: 1px solid #e9eced;
   margin: 0;
-  &_logo{
+
+  &_logo {
+    padding: 0 10px;
     width: 120px;
-    img{
-      width: 100%;
-      height: 100%;
+    cursor: pointer;
+
+    .bold {
+      font-weight: bold;
+      margin-right: 1px;
     }
   }
-  &_menu{
+
+  &_menu {
     height: 95%;
-    .primary{
+    width: 10%;
+
+    .primary {
       color: #fff;
-      background-color: #009fd9;
+      background-color: #e74643;
       border-color: transparent;
       padding: 0 22px;
       border-radius: 4px;
       min-height: 36px;
       line-height: 20px;
       font-size: 14px;
+      margin: 5px;
     }
+
     .default {
       margin-left: 10px;
       height: 100%;
@@ -30,6 +39,7 @@
       min-width: 80px;
       font-size: 14px;
       line-height: 20px;
+
       &:hover {
         box-shadow: inset 0 -3px 0 #d3d4d5;
         outline: none;

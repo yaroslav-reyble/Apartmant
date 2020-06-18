@@ -1,20 +1,11 @@
-<!--<div *ngIf="location">-->
-<!--<p>{{ "home.location" | translate }}</p>-->
-<!--<p>{{ "home.country" | translate }}: {{location.country}}</p>-->
-<!--<p>{{ "home.regionName" | translate }}: {{location.regionName}}</p>-->
-<!--<p>{{ "home.city" | translate }}: {{location.city}}</p>-->
-<!--<p>{{ "home.zip" | translate }}: {{location.zip}}</p>-->
-<!--<p>{{ "home.timeZone" | translate }}: {{location.timezone}}</p>-->
-<!--</div>-->
 <section>
     <div class="wrapper" fxLayout>
-
         <div class="tab-side" fxFlex="50%" fxLayoutAlign="end" fxFlexAlign="center">
-            <div fxFlex="70%">
-                <mat-tab-group>
+            <div fxFlex="80%">
+                <mat-tab-group animationDuration="0ms">
                     <mat-tab label="Find properties">
                         <div class="hire" *ngIf="location">
-                            <h1>Find Your Dream Apartment.</h1>
+                            <h1>Find Your Dream Apartment</h1>
                             <mat-form-field>
                                 <mat-label>Choose your city</mat-label>
                                 <mat-select matInput [(value)]="city" name="food">
@@ -31,14 +22,25 @@
                         </div>
                     </mat-tab>
                     <mat-tab label="Find Broker">
-                        <div fxLayout *ngIf="!isSecondStep">
-                            <div class="hire broker" fxLayout fxFlex="100%" fxLayoutAlign="end">
-                                <app-broker-form (nextStep)="isSecondStep = true"></app-broker-form>
+                        <form fxLayout fxFlex="100%" class="broker-form" [formGroup]="brokerGroup">
+                            <div class="hire broker" fxFlex="100%" fxLayout="column">
+                                <div fxLayout class="input-wrap" fxLayoutAlign="center">
+                                    <mat-form-field appearance="outline" class="half-w">
+                                        <mat-label>First Name*</mat-label>
+                                        <input matInput placeholder="First Name" formControlName="firstName">
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline" class="half-w">
+                                        <mat-label>Last Name*</mat-label>
+                                        <input matInput placeholder="Last Name*" formControlName="lastName">
+                                    </mat-form-field>
+                                </div>
+                                <mat-form-field appearance="outline" class="w-84">
+                                    <mat-label>Phone</mat-label>
+                                    <input matInput placeholder="Phone" formControlName="phone">
+                                </mat-form-field>
+                                <button mat-button type="button" (click)="goToRegistr()">Submit</button>
                             </div>
-                        </div>
-                        <div *ngIf="isSecondStep" class="hire">
-                            <app-progress-status fxFlex="40%"></app-progress-status>
-                        </div>
+                        </form>
                     </mat-tab>
                 </mat-tab-group>
             </div>
@@ -46,30 +48,4 @@
         <div class="image-side" fxFlex="50%">
         </div>
     </div>
-    <!--</section>-->
-    <!--<section>-->
-    <!--  <div class="wrap" fxLayout fxLayoutAlign="center" >-->
-    <!--    <div class="carousel" fxFlexAlign="center">-->
-    <!--     <div class="carousel-label">-->
-    <!--       <span>-->
-    <!--       Popular services in Ashburn, VA.-->
-    <!--       </span>-->
-    <!--     </div>-->
-    <!--      <div class="carousel-items" fxLayout fxLayoutAlign="center" >-->
-    <!--       <div class="item" fxFlex="33%">-->
-    <!--         <img src="assets/img/work.jpeg">-->
-    <!--         <p>Interior Painting</p>-->
-    <!--       </div>-->
-    <!--        <div class="item" fxFlex="33%">-->
-    <!--          <img src="assets/img/work.jpeg">-->
-    <!--          <p>Interior Painting</p>-->
-    <!--        </div>-->
-    <!--        <div class="item" fxFlex="33%">-->
-    <!--          <img src="assets/img/work.jpeg">-->
-    <!--          <p>Interior Painting</p>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-
-    <!--</section>-->
+</section>

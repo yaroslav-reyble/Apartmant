@@ -1,26 +1,39 @@
-<section>
-    <form>
-        <div fxLayout fxLayoutAlign="space-between">
+<section fxLayout fxLayoutAlign="end" *ngIf="regGroup">
+    <form [formGroup]="regGroup" >
+        <h1>Fill the form and agent will contact you</h1>
+        <div fxLayout fxLayoutAlign="space-between" class="input-wrap">
             <mat-form-field appearance="outline" class="half-w">
                 <mat-label>First Name*</mat-label>
-                <input matInput placeholder="First Name">
+                <input matInput placeholder="First Name" formControlName="firstName">
             </mat-form-field>
             <mat-form-field appearance="outline" class="half-w">
                 <mat-label>Last Name*</mat-label>
-                <input matInput placeholder="Last Name*">
+                <input matInput placeholder="Last Name*" formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="half-w">
+                <mat-label>Choose your city</mat-label>
+                <mat-select matInput formControlName="city" >
+                    <mat-option *ngFor="let city of cities" [value]="city">
+                        {{city}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="half-w">
+                <mat-label>Zip Code</mat-label>
+                <input matInput type="text" formControlName="zip">
             </mat-form-field>
         </div>
         <mat-form-field appearance="outline" class="w-84">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Email">
+            <input matInput placeholder="Email" formControlName="email">
         </mat-form-field>
         <mat-form-field appearance="outline" class="w-84">
             <mat-label>Phone</mat-label>
-            <input matInput placeholder="Phone">
+            <input matInput placeholder="Phone" formControlName="phone">
         </mat-form-field>
         <mat-form-field appearance="outline" class="w-84">
             <mat-label>How did find us?</mat-label>
-            <input matInput placeholder="How did find us?">
+            <input matInput placeholder="How did find us?" formControlName="foundUs">
         </mat-form-field>
         <button mat-button type="button" (click)="nextStep.emit()">Submit</button>
     </form>

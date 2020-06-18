@@ -1,0 +1,23 @@
+.wrap{
+    background: #f6e7ea;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .register{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        background: white;
+        min-height: 500px;
+        height: 70vh;
+        width: 60%;
+        .progress{
+            position: absolute;
+            left: -100px;
+            width: 30%;
+        }
+        .form{
+
+        }
+    }
+}

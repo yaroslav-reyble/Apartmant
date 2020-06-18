@@ -3,12 +3,13 @@
   height: calc(100vh - 66px);
 
   .tab-side {
+    &::ng-deep{
+      .mat-tab-group.mat-primary .mat-ink-bar{
+        background-color: #e74643;
+      }
+    }
     h1 {
       font-size: 2.4vw;
-    }
-
-    .broker {
-      text-align: center;
     }
 
     .hire {
@@ -42,11 +43,9 @@
       font-weight: 700;
       border-radius: 4px;
       overflow: visible;
-      background-color: #009fd9;
+      background-color: #e74643;
       border: 2px solid transparent;
       color: #fff;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
       width: auto;
     }
   }
@@ -57,6 +56,25 @@
     background-repeat: no-repeat;
     background-image: url("~assets/img/main1.png");
 
+  }
+
+  .broker-form {
+    margin-top: 25px;
+
+    .broker {
+      align-items: center;
+      display: flex;
+      .input-wrap{
+        width: 100%;
+      }
+      .half-w {
+        width: 38%;
+      }
+      mat-form-field {
+        width: 80%;
+      }
+
+    }
   }
 }
 
@@ -86,8 +104,4 @@
       }
     }
   }
-}
-
-app-broker-form {
-  width: 95%;
 }
