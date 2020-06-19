@@ -1,6 +1,5 @@
-<section fxLayout fxLayoutAlign="end" *ngIf="regGroup">
+<section  fxLayoutAlign="end" *ngIf="regGroup" fxLayout="column">
     <form [formGroup]="regGroup" >
-        <h1>Fill the form and agent will contact you</h1>
         <div fxLayout fxLayoutAlign="space-between" class="input-wrap">
             <mat-form-field appearance="outline" class="half-w">
                 <mat-label>First Name*</mat-label>
@@ -33,7 +32,11 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="w-84">
             <mat-label>How did find us?</mat-label>
-            <input matInput placeholder="How did find us?" formControlName="foundUs">
+            <mat-select matInput formControlName="foundUs" >
+                <mat-option *ngFor="let howFound of howFoundUs" [value]="howFound">
+                    {{howFound}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
         <button mat-button type="button" (click)="nextStep.emit()">Submit</button>
     </form>

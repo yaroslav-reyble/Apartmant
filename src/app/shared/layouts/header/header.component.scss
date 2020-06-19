@@ -17,7 +17,6 @@
 
   &_menu {
     height: 95%;
-    width: 10%;
 
     .primary {
       color: #fff;
@@ -41,7 +40,7 @@
       line-height: 20px;
 
       &:hover {
-        box-shadow: inset 0 -3px 0 #d3d4d5;
+        box-shadow: inset 0 -3px 0 #e74643;
         outline: none;
       }
     }

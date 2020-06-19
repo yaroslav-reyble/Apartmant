@@ -1,12 +1,12 @@
 <section>
-    <div class="wrapper" fxLayout>
-        <div class="tab-side" fxFlex="50%" fxLayoutAlign="end" fxFlexAlign="center">
-            <div fxFlex="80%">
+    <div class="wrapper" fxLayout >
+        <div class="tab-side"  fxLayoutAlign="start" fxFlexAlign="center">
+            <div class="tab-side-wrap">
                 <mat-tab-group animationDuration="0ms">
                     <mat-tab label="Find properties">
                         <div class="hire" *ngIf="location">
                             <h1>Find Your Dream Apartment</h1>
-                            <mat-form-field>
+                            <mat-form-field >
                                 <mat-label>Choose your city</mat-label>
                                 <mat-select matInput [(value)]="city" name="food">
                                     <mat-option *ngFor="let city of cities" [value]="city">
@@ -36,7 +36,7 @@
                                 </div>
                                 <mat-form-field appearance="outline" class="w-84">
                                     <mat-label>Phone</mat-label>
-                                    <input matInput placeholder="Phone" formControlName="phone">
+                                    <input matInput placeholder="Phone" formControlName="phone" type="number">
                                 </mat-form-field>
                                 <button mat-button type="button" (click)="goToRegistr()">Submit</button>
                             </div>
@@ -45,7 +45,7 @@
                 </mat-tab-group>
             </div>
         </div>
-        <div class="image-side" fxFlex="50%">
+        <div class="image-side">
         </div>
     </div>
 </section>

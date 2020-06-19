@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
     imports: [CommonModule, RouterModule, TranslateModule, FlexLayoutModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatStepperModule, ReactiveFormsModule, MatSelectModule],
-  declarations: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent, HeaderComponent, BrokerFormComponent, ProgressStatusComponent],
-  exports: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent, BrokerFormComponent, ProgressStatusComponent],
+  declarations: [FooterComponent,  ToolbarComponent, WrapperComponent, HeaderComponent, BrokerFormComponent, ProgressStatusComponent],
+  exports: [FooterComponent,  ToolbarComponent, WrapperComponent, BrokerFormComponent, ProgressStatusComponent],
 })
 export class LayoutsModule {}
+
